@@ -45,3 +45,179 @@ Red Dead Redemption 2:
 Fortnite:
   MIN: OS=Windows 10 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core i3-3225; CPU_AMD=AMD Athlon II X2 250; RAM=4GB; GPU=Intel HD 4000 / GeForce GT 520; DX=11; Storage=30GB
   REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-7300U; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 / Radeon R9 280; DX=12; Storage=SSD 30GB
+
+Cyberpunk 2077:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-6700; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1060 6GB / Radeon RX 580; DX=12; Storage=70GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-12700; CPU_AMD=AMD Ryzen 7 5800X; RAM=16GB; GPU=GeForce RTX 3070 / Radeon RX 6800 XT; DX=12; Storage=SSD 70GB
+
+Baldur's Gate 3:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4690; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 970 / Radeon RX 480; DX=11; Storage=150GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-10700; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 5700 XT; DX=11; Storage=SSD 150GB
+
+Hogwarts Legacy:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-6600; CPU_AMD=AMD Ryzen 5 1400; RAM=8GB; GPU=GeForce GTX 960 / Radeon RX 470; DX=12; Storage=85GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 6700 XT; DX=12; Storage=SSD 85GB
+
+Starfield:
+  MIN: OS=Windows 10 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-9700K; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1070 Ti / Radeon RX 5700; DX=12; Storage=125GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i5-12600K; CPU_AMD=AMD Ryzen 7 5800X; RAM=16GB; GPU=GeForce RTX 2080 / Radeon RX 6800 XT; DX=12; Storage=SSD 125GB
+
+Alan Wake 2:
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-7600K; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 6600; DX=12; Storage=90GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-10700K; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 3070 / Radeon RX 6800 XT; DX=12; Storage=SSD 90GB
+
+Assassin's Creed Mirage:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-4790; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1060 / Radeon RX 570; DX=12; Storage=40GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 6600 XT; DX=12; Storage=SSD 40GB
+
+Call of Duty: Modern Warfare III (2023):
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-6600; CPU_AMD=AMD Ryzen 5 1400; RAM=8GB; GPU=GeForce GTX 960 / Radeon RX 470; DX=12; Storage=100GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700K; CPU_AMD=AMD Ryzen 5 5600X; RAM=16GB; GPU=GeForce RTX 3060 / Radeon RX 6600 XT; DX=12; Storage=SSD 100GB
+
+Battlefield 2042:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-6600K; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1050 Ti / Radeon RX 560; DX=12; Storage=100GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700K; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce RTX 3060 / Radeon RX 6600 XT; DX=12; Storage=SSD 100GB
+
+Apex Legends:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-6300; CPU_AMD=AMD FX-4350; RAM=8GB; GPU=GeForce GT 640 / Radeon HD 7730; DX=11; Storage=60GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-7500; CPU_AMD=AMD Ryzen 3 1200; RAM=12GB; GPU=GeForce GTX 970 / Radeon R9 290; DX=11; Storage=SSD 60GB
+
+Valorant:
+  MIN: OS=Windows 7/10 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core 2 Duo E8400; CPU_AMD=AMD Athlon 200GE; RAM=4GB; GPU=Intel HD 3000; DX=11; Storage=20GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-9100F; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 1050 Ti / Radeon RX 560; DX=11; Storage=SSD 20GB
+
+Overwatch 2:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-3470; CPU_AMD=AMD FX-8350; RAM=6GB; GPU=GeForce GTX 660 / Radeon HD 7950; DX=11; Storage=50GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-6700K; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 50GB
+
+Rainbow Six Siege:
+  MIN: OS=Windows 7 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-560; CPU_AMD=AMD Phenom II X4 945; RAM=6GB; GPU=GeForce GTX 460 / Radeon HD 5870; DX=11; Storage=61GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2500K; CPU_AMD=AMD FX-8120; RAM=8GB; GPU=GeForce GTX 970 / Radeon R9 290; DX=11; Storage=SSD 61GB
+
+PUBG: Battlegrounds:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4430; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 960 / Radeon R7 370; DX=11; Storage=40GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 40GB
+
+League of Legends:
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core 2 Duo E6600; CPU_AMD=AMD Athlon II X2 250; RAM=4GB; GPU=Intel HD 4000 / GeForce 8800; DX=11; Storage=16GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-8100; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 750 Ti; DX=11; Storage=SSD 16GB
+
+Destiny 2:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-3250; CPU_AMD=AMD FX-4300; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7850; DX=11; Storage=110GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-8400; CPU_AMD=AMD Ryzen 5 2600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=12; Storage=SSD 110GB
+
+Diablo IV:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2500K; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 660 / Radeon R9 280; DX=12; Storage=90GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1070 / Radeon RX Vega 56; DX=12; Storage=SSD 90GB
+
+Path of Exile:
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core i3-2100; CPU_AMD=AMD Athlon X2 64; RAM=4GB; GPU=GeForce GTX 650 / Radeon HD 7750; DX=11; Storage=40GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-6400; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 / Radeon R9 380; DX=11; Storage=SSD 40GB
+
+Warframe:
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core 2 Duo E6600; CPU_AMD=AMD Athlon II X2 250; RAM=4GB; GPU=GeForce 8600 GT / Radeon HD 3600; DX=10; Storage=35GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 / Radeon R9 280; DX=11; Storage=SSD 35GB
+
+Helldivers 2:
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-8400; CPU_AMD=AMD Ryzen 5 1500X; RAM=12GB; GPU=GeForce GTX 1050 Ti / Radeon RX 560; DX=12; Storage=70GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-9700K; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 6600 XT; DX=12; Storage=SSD 70GB
+
+Palworld:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-3570; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 1050 / Radeon RX 560; DX=11; Storage=25GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-10400; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1660 / Radeon RX 590; DX=11; Storage=SSD 25GB
+
+Armored Core VI: Fires of Rubicon:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-4770K; CPU_AMD=AMD Ryzen 5 1500X; RAM=8GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=12; Storage=65GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=12GB; GPU=GeForce GTX 1080 / Radeon RX Vega 64; DX=12; Storage=SSD 65GB
+
+Resident Evil 4 (Remake):
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=8GB; GPU=GeForce GTX 1050 Ti / Radeon RX 560; DX=12; Storage=60GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-10700; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce GTX 2060 / Radeon RX 6600; DX=12; Storage=SSD 60GB
+
+Star Wars Jedi: Survivor:
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=8GB; GPU=GeForce GTX 1070 / Radeon RX 580; DX=12; Storage=130GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i5-11600K; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 2070 / Radeon RX 6700 XT; DX=12; Storage=SSD 130GB
+
+Forza Horizon 5:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 970 / Radeon RX 470; DX=12; Storage=110GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-9700K; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 5700 XT; DX=12; Storage=SSD 110GB
+
+Microsoft Flight Simulator (2020):
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 770 / Radeon RX 570; DX=11; Storage=150GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-8400; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 5700 XT; DX=12; Storage=SSD 150GB
+
+Sea of Thieves:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-3470; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 380; DX=11; Storage=75GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-4770; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 75GB
+
+Genshin Impact:
+  MIN: OS=Windows 7/8.1/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-750; CPU_AMD=AMD Phenom II X4; RAM=8GB; GPU=GeForce GT 1030 / Radeon R7 240; DX=11; Storage=70GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-9400F; CPU_AMD=AMD Ryzen 5 2600; RAM=16GB; GPU=GeForce GTX 1660 / Radeon RX 590; DX=11; Storage=SSD 70GB
+
+Monster Hunter Rise:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD FX-8300; RAM=8GB; GPU=GeForce GTX 1060 / Radeon RX 570; DX=12; Storage=36GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1660 Ti / Radeon RX 590; DX=12; Storage=SSD 36GB
+
+Nier: Automata:
+  MIN: OS=Windows 7/8.1/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4670; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 270X; DX=11; Storage=50GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-6700; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 50GB
+
+Rust:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-3770; CPU_AMD=AMD FX-9590; RAM=10GB; GPU=GeForce GTX 670 / Radeon HD 7870; DX=11; Storage=25GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-4790; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 980 / Radeon R9 390; DX=11; Storage=SSD 25GB
+
+DayZ:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4430; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 760 / Radeon R9 270X; DX=11; Storage=25GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 25GB
+
+ARK: Survival Ascended:
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-8600K; CPU_AMD=AMD Ryzen 5 2600; RAM=16GB; GPU=GeForce RTX 2060 / Radeon RX 6600; DX=12; Storage=70GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-10700K; CPU_AMD=AMD Ryzen 7 3700X; RAM=24GB; GPU=GeForce RTX 3080 / Radeon RX 6800 XT; DX=12; Storage=SSD 70GB
+
+Stalker 2: Heart of Chornobyl:
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-10400; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1070 Ti / Radeon RX 5600 XT; DX=12; Storage=100GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-12700; CPU_AMD=AMD Ryzen 7 5800X; RAM=24GB; GPU=GeForce RTX 3070 / Radeon RX 6800 XT; DX=12; Storage=SSD 100GB
+
+Gran Turismo-like: Assetto Corsa Competizione:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 460 / Radeon HD 7770; DX=11; Storage=50GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1070 / Radeon RX Vega 56; DX=11; Storage=SSD 50GB
+
+FIFA 24 (EA Sports FC 24):
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-6600K; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1050 Ti / Radeon RX 570; DX=12; Storage=50GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-9600K; CPU_AMD=AMD Ryzen 5 3600; RAM=12GB; GPU=GeForce GTX 1660 / Radeon RX 590; DX=12; Storage=SSD 50GB
+
+eFootball 2024:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2300; CPU_AMD=AMD FX-4350; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7850; DX=11; Storage=40GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-8400; CPU_AMD=AMD Ryzen 5 2600; RAM=12GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 40GB
+
+Rocket League:
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core 2 Duo E6600; CPU_AMD=AMD Athlon 64 X2 4800+; RAM=4GB; GPU=GeForce 8800 / Radeon HD 2900; DX=9; Storage=20GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2400; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7950; DX=11; Storage=SSD 20GB
+
+Terraria:
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core 2 Duo; CPU_AMD=AMD Athlon II X2; RAM=2GB; GPU=Any DX9; DX=9; Storage=1GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-8100; CPU_AMD=AMD Ryzen 3 1200; RAM=4GB; GPU=Any DX11; DX=11; Storage=SSD 1GB
+
+Hades II (Early Access):
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-6500; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 750 Ti / Radeon R7 360; DX=11; Storage=10GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-10400; CPU_AMD=AMD Ryzen 5 2600; RAM=8GB; GPU=GeForce GTX 1050 Ti / Radeon RX 560; DX=11; Storage=SSD 10GB
+
+Lies of P:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-8600; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 960 / Radeon RX 470; DX=12; Storage=50GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1660 Ti / Radeon RX 590; DX=12; Storage=SSD 50GB
+
+The Last of Us Part I (PC):
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=12GB; GPU=GeForce GTX 970 / Radeon RX 480; DX=12; Storage=100GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i5-11600K; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 2070 / Radeon RX 6700 XT; DX=12; Storage=SSD 100GB
+
+Shadow of the Tomb Raider:
+  MIN: OS=Windows 7/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-3220; CPU_AMD=AMD FX-4100; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7870; DX=11; Storage=40GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-4770K; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=12; Storage=SSD 40GB
+
+No Man's Sky:
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-3570; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 480 / Radeon HD 7870; DX=11; Storage=15GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-4770; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 15GB
+
+Subnautica:
+  MIN: OS=Windows 7 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i3-4170; CPU_AMD=AMD A10-7850K; RAM=8GB; GPU=GeForce GTX 650 / Radeon HD 7750; DX=11; Storage=20GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 / Radeon R9 280; DX=11; Storage=SSD 20GB
