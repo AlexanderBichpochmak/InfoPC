@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoPC v2.0.0 — Pochmak Labs</title>
+  <meta name="description" content="InfoPC — аккуратное Windows‑приложение для сканирования железа: CPU, GPU, RAM, диски, материнская плата. Стеклянный интерфейс, список игр с MIN/REC требованиями. Доступна x64‑версия." />
+  <meta name="theme-color" content="#0f1216" />
+  <link rel="icon" href="favicon.png" />
+  <style>
+    :root{
+      --bg:#0f1216;--bg2:#10131a;
+      --card:#151a1f26;--border:#223a4754;
+      --accent:#6ae5ff;--accent2:#44ddf2;
+      --text:#ffffff;--muted:#ffffffb3;
+      --success:#34d399;--warn:#f59e0b;--danger:#ef4444;
+      --maxw:1120px;--radius:16px;
+      --shadow:0 10px 24px #00000040;
+      --focus:0 0 0 3px #6ae5ff55;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;color:var(--text);
+      font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(900px 620px at 14% 14%, #44ddf233, transparent 70%),
+        radial-gradient(900px 620px at 82% 78%, #28c6e522, transparent 70%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(120%) blur(10px);
+      background:#0f1216cc;border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex;align-items:center;gap:12px;
+      max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+    }
+    .logo-dot{width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px 2px #6ae5ff80}
+    .brand{font-weight:800;letter-spacing:.2px;color:#ffffffdd}
+    .nav-spacer{flex:1}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:12px;border:1px solid #6ae5ff75;
+      background:#6ae5ff22;color:var(--accent);cursor:pointer;
+      transition:background .12s ease, transform .08s ease;
+    }
+    .btn:hover{background:#6ae5ff33;transform:translateY(-1px)}
+    .btn:focus-visible{outline:none;box-shadow:var(--focus)}
+    .btn-outline{background:transparent;border-color:#6ae5ff80}
+    .btn-secondary{border-color:#ffffff33;background:#ffffff12;color:#ffffffcc}
+    .btn[disabled], .btn[aria-disabled="true"]{opacity:.6;cursor:not-allowed;transform:none}
+
+    /* Glass cards */
+    .glass{
+      border-radius:var(--radius);border:1px solid var(--border);
+      background:#1a1f2622;backdrop-filter:blur(12px);
+      box-shadow:var(--shadow);
+    }
+    .card{padding:16px}
+    .section-title{font-size:22px;font-weight:700;margin:8px 0 12px}
+    .muted{color:var(--muted)}
+
+    /* Hero */
+    .hero{
+      display:grid;gap:20px;align-items:center;
+      grid-template-columns:1.2fr 1fr;padding:22px 0 6px;
+    }
+    @media (max-width:980px){.hero{grid-template-columns:1fr}}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;border:1px solid #6ae5ff80;
+      background:#6ae5ff22;color:var(--accent);font-weight:700;font-size:12px;
+    }
+    h1{font-size:40px;font-weight:800;margin:8px 0 10px}
+    .lead{font-size:16px;color:var(--muted);margin:0 0 16px}
+    .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+    /* Feature grid — equal height, no jump */
+    .grid{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+    .feature-card, .req-card{
+      display:flex;flex-direction:column;justify-content:flex-start;
+      min-height:160px;padding:16px;
+    }
+    .item-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+    .badge{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:6px 10px;border-radius:10px;font-size:13px;font-weight:700;
+      color:#ffffffcc;border:1px solid #ffffff20;background:#ffffff14;
+    }
+    .badge.accent{color:var(--accent);border-color:#6ae5ff66;background:#6ae5ff22}
+    .badge.success{color:var(--success);border-color:#34d39966;background:#34d39922}
+    .badge.warn{color:var(--warn);border-color:#f59e0b66;background:#f59e0b22}
+    .badge.danger{color:var(--danger);border-color:#ef444466;background:#ef444422}
+    .desc{color:var(--muted);font-size:14px;line-height:1.45;flex:1}
+
+    /* Alert */
+    .alert{
+      display:grid;grid-template-columns:24px 1fr;gap:10px;
+      padding:12px;border-radius:12px;border:1px solid #f59e0b66;background:#f59e0b1a;
+    }
+
+    /* Code + copy */
+    .code{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+      font-size:12px;color:#cdeefd;background:#0b0f13;border:1px solid #1e2a36;
+      padding:8px 10px;border-radius:8px;user-select:all;
+    }
+
+    /* FAQ accordion */
+    .faq{display:grid;gap:10px}
+    .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .faq-head{
+      width:100%;text-align:left;background:#ffffff12;color:#ffffffee;
+      padding:12px 14px;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+    }
+    .faq-head:hover{background:#ffffff18}
+    .faq-head:focus-visible{outline:none;box-shadow:var(--focus)}
+    .faq-body{padding:12px 14px;display:none}
+    .faq-item.open .faq-body{display:block}
+
+    /* Footer */
+    footer{margin-top:28px;padding:18px 20px;border-top:1px solid var(--border);color:#ffffff99;text-align:center}
+    .small{font-size:12px}
+
+    /* Motion safety */
+    @media (prefers-reduced-motion: reduce){
+      .btn, .btn:hover{transition:none;transform:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="nav" aria-label="Главная навигация">
+      <div class="logo-dot" aria-hidden="true"></div>
+      <div class="brand">InfoPC • Pochmak Labs</div>
+      <div class="nav-spacer"></div>
+      <a class="btn btn-outline" href="https://t.me/pochmaklabs" target="_blank" rel="noopener">Telegram</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <div class="pill" title="Последняя стабильная версия">Версия: v2.0.0</div>
+        <h1 id="hero-title">InfoPC — точное сканирование вашего ПК</h1>
+        <p class="lead">
+          CPU, GPU, RAM (модули), материнская плата и диски — красиво и по делу.
+          Фирменный стеклянный интерфейс и сравнение вашего ПК с MIN/REC требованиями игр.
+        </p>
+
+        <div class="row" style="margin-top:8px;">
+          <button id="btn-x64" class="btn" title="Скачать 64‑битный установщик">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zm7-18L5.33 8h3.84v4h4.66V8h3.84L12 2z"/></svg>
+            Скачать InfoPC x64
+          </button>
+          <button class="btn btn-secondary" aria-disabled="true" disabled title="32‑битная версия в разработке">
+            x86 (32‑бит) — в разработке
+          </button>
+          <span id="os-hint" class="badge warn" style="display:none;"></span>
+        </div>
+
+        <div class="row small" style="margin-top:10px;">
+          <span class="muted">SHA‑256:</span>
+          <code id="sha256" class="code">0000000000000000000000000000000000000000000000000000000000000000</code>
+          <button id="copy-hash" class="btn btn-outline" style="padding:6px 10px;border-radius:8px;">Копировать</button>
+        </div>
+
+        <div class="alert" style="margin-top:14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+          <div>
+            <strong>Важно:</strong> антивирус или Windows SmartScreen могут ругаться при установке,
+            потому что файлы <u>не подписаны цифровой подписью</u>. Приложение безопасное и не содержит вредоносного кода.
+            Если появится предупреждение — нажмите «Подробнее» → «Выполнить в любом случае».
+          </div>
+        </div>
+      </div>
+
+      <aside class="glass card" aria-labelledby="features-title">
+        <div class="section-title" id="features-title">Ключевые особенности</div>
+        <div class="grid">
+          <div class="glass feature-card">
+            <div class="item-top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 7l-5 5h3v4h4v-4h3l-5-5z"/></svg>
+              <div class="badge accent">Скан железа</div>
+            </div>
+            <div class="desc">CPU, GPU, RAM (модули), материнская плата и диски.</div>
+          </div>
+          <div class="glass feature-card">
+            <div class="item-top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/></svg>
+              <div class="badge accent">Список игр</div>
+            </div>
+            <div class="desc">Сравнение вашего ПК с MIN/REC требованиями популярных игр.</div>
+          </div>
+          <div class="glass feature-card">
+            <div class="item-top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8zm0 4l4 4H8l4-4z"/></svg>
+              <div class="badge accent">Стеклянный UI</div>
+            </div>
+            <div class="desc">Аккуратная типографика, свечение, плавные анимации.</div>
+          </div>
+        </div>
+
+        <div class="section-title" style="margin-top:16px;">Системные требования</div>
+        <div class="grid" aria-label="Системные требования">
+          <div class="glass req-card">
+            <div class="item-top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v11h2V5h14v14h-11v2h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+              <div class="badge success">OS</div>
+            </div>
+            <div class="desc">Windows 10/11, только x64</div>
+          </div>
+          <div class="glass req-card">
+            <div class="item-top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M15 9H5v6h10V9zm2-5H3c-1.1 0-2 .9-2 2v12h4v2h10v-2h4V6c0-1.1-.9-2-2-2z"/></svg>
+              <div class="badge success">RAM</div>
+            </div>
+            <div class="desc">от 4 GB (рекомендуется 8 GB+)</div>
+          </div>
+          <div class="glass req-card">
+            <div class="item-top">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 3L4 9v12h16V9l-8-6zm0 2.2L18 10v8H6v-8l6-4.8z"/></svg>
+              <div class="badge success">Диск</div>
+            </div>
+            <div class="desc">~100 MB для установки и данных</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- CHANGELOG -->
+    <section class="glass card" style="margin-top:18px;" aria-labelledby="changelog-title">
+      <div class="section-title" id="changelog-title">Что нового в v2.0.0</div>
+      <div class="grid">
+        <div class="glass feature-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+            <div class="badge success">UI</div>
+          </div>
+          <div class="desc">Полностью обновлён визуал: стекло, свечение, плавные анимации, чёткая типографика.</div>
+        </div>
+        <div class="glass feature-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/></svg>
+            <div class="badge success">Игры</div>
+          </div>
+          <div class="desc">Список поддерживаемых игр и сравнение MIN/REC с вашим ПК.</div>
+        </div>
+        <div class="glass feature-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 7l-5 5h3v4h4v-4h3l-5-5z"/></svg>
+            <div class="badge success">Скан</div>
+          </div>
+          <div class="desc">Точнее RAM (модули), диски, CPU/GPU и материнская плата.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="glass card" style="margin-top:18px;" aria-labelledby="faq-title">
+      <div class="section-title" id="faq-title">FAQ</div>
+      <div class="faq" id="faq">
+        <div class="faq-item">
+          <button class="faq-head" type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+            Почему может ругаться антивирус / SmartScreen?
+          </button>
+          <div class="faq-body">
+            Файл пока не подписан цифровой подписью — некоторые антивирусы и SmartScreen показывают предупреждение «неизвестный издатель».
+            Приложение безопасное. Если видите диалог SmartScreen — нажмите «Подробнее» → «Выполнить в любом случае».
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-head" type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+            Где скачать 32‑битную версию?
+          </button>
+          <div class="faq-body">
+            x86 (32‑бит) версия в разработке. Сейчас доступна только x64 для Windows 10/11.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-head" type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+            Как подтвердить целостность установщика?
+          </button>
+          <div class="faq-body">
+            Сравните SHA‑256 хэш на этой странице с хэшем вашего файла после скачивания. Хэши должны совпасть.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="glass card" style="margin-top:18px;" aria-labelledby="contact-title">
+      <div class="section-title" id="contact-title">Связь и поддержка</div>
+      <p class="muted">Есть идеи, вопросы или баги? Присоединяйтесь к Telegram‑каналу:</p>
+      <p><a class="btn btn-outline" href="https://t.me/pochmaklabs" target="_blank" rel="noopener">Открыть Telegram</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div>Pochmak Labs • Красота, полезность, точность</div>
+    <div class="small" style="margin-top:6px;">© 2025 Pochmak Labs • InfoPC v2.0.0 • Только x64. x86 — в разработке.</div>
+  </footer>
+
+  <script>
+    // Конфиг релиза (обнови URL и хэш под фактический билд)
+    const DOWNLOAD_X64_URL = "https://github.com/AlexanderBichpochmak/InfoPC/releases/download/v2.0.0/InfoPC-Setup-2.0.0-x64.exe";
+    const SHA256 = "b4f2f6b5e7c1d9a2f0e8d3c4a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0";
+
+    const btnX64 = document.getElementById("btn-x64");
+    const shaEl = document.getElementById("sha256");
+    const copyBtn = document.getElementById("copy-hash");
+    const osHint = document.getElementById("os-hint");
+
+    // Инициализация хэша
+    shaEl.textContent = SHA256;
+
+    // Скачивание x64 (без визуальных скачков UI)
+    btnX64.addEventListener("click", () => {
+      btnX64.disabled = true;
+      btnX64.setAttribute("aria-disabled","true");
+      btnX64.textContent = "Загрузка…";
+      try { window.location.assign(DOWNLOAD_X64_URL); }
+      finally {
+        setTimeout(() => {
+          btnX64.disabled = false;
+          btnX64.removeAttribute("aria-disabled");
+          btnX64.textContent = "Скачать InfoPC x64";
+        }, 1200);
+      }
+    });
+
+    // Копирование SHA‑256 с fallback
+    copyBtn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(SHA256);
+        copyBtn.textContent = "Скопировано!";
+        setTimeout(() => copyBtn.textContent = "Копировать", 1500);
+      }catch{
+        const range = document.createRange();
+        range.selectNodeContents(shaEl);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+      }
+    });
+
+    // Подсказка по ОС и архитектуре
+    (async function detectOS(){
+      let platform = "", arch = "";
+      try{
+        if (navigator.userAgentData) {
+          const info = await navigator.userAgentData.getHighEntropyValues(["platform","architecture","bitness"]);
+          platform = info.platform || "";
+          arch = info.architecture || info.bitness || "";
+        } else {
+          const ua = navigator.userAgent.toLowerCase();
+          platform = ua.includes("windows") ? "Windows" : (ua.includes("mac") ? "macOS" : (ua.includes("linux") ? "Linux" : ""));
+          arch = ua.includes("arm") || ua.includes("aarch64") ? "ARM" :
+                 (ua.includes("x64") || ua.includes("win64") || ua.includes("wow64")) ? "x64" :
+                 (ua.includes("x86") || ua.includes("i386") || ua.includes("i686")) ? "x86" : "";
+        }
+      }catch{}
+      const isWindows = (platform || "").toLowerCase().includes("win");
+      const isX64 = (arch || "").toLowerCase().includes("64");
+      osHint.style.display = "inline-flex";
+      if (!isWindows) {
+        osHint.textContent = "Ваше устройство не Windows — загрузчик только для Windows x64";
+        osHint.classList.remove("success"); osHint.classList.add("warn");
+      } else if (!isX64) {
+        osHint.textContent = "Возможно x86/ARM. Сейчас доступна только x64‑версия";
+        osHint.classList.remove("success"); osHint.classList.add("warn");
+      } else {
+        osHint.textContent = "Windows x64 обнаружена — можно скачивать";
+        osHint.classList.remove("warn"); osHint.classList.add("success");
+      }
+    })();
+
+    // FAQ accordion — без дёрганий и с поддержкой клавиатуры
+    document.querySelectorAll(".faq-item").forEach(item => {
+      const head = item.querySelector(".faq-head");
+      head.addEventListener("click", () => {
+        const open = item.classList.contains("open");
+        document.querySelectorAll(".faq-item.open").forEach(i => i.classList.remove("open"));
+        if (!open) item.classList.add("open");
+      });
+      head.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); head.click(); }
+      });
+    });
+  </script>
+</body>
+</html>
