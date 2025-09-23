@@ -1,151 +1,47 @@
 Counter-Strike 2:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-2500K / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 950 / Radeon R7 260 (1GB); DX=11; Storage=85GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-9700K / AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 3060 / Radeon RX 6600 XT; DX=11; Storage=SSD 85GB
+  MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2500K; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 950 / Radeon R7 260 (1GB); DX=11; Storage=85GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-9700K; CPU_AMD=AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 3060 / Radeon RX 6600 XT; DX=11; Storage=SSD 85GB
 
 Minecraft (Java Edition):
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core i3-3210 / AMD A8-7600; RAM=4GB; GPU=Intel HD 4000 / GeForce 400 series; DX=11; Storage=1GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-4690 / AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 750 Ti; DX=11; Storage=4GB
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core i3-3210; CPU_AMD=AMD A8-7600; RAM=4GB; GPU=Intel HD 4000 / GeForce 400 series; DX=11; Storage=1GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4690; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 750 Ti; DX=11; Storage=4GB
 
 Dota 2:
-  MIN: OS=Windows 7 64-bit; CPU=Dual-Core; RAM=4GB; GPU=GeForce 8600 / Radeon HD 2600; DX=9; Storage=15GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5 / AMD Ryzen 3; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7850; DX=11; Storage=15GB
+  MIN: OS=Windows 7 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Pentium E5700; CPU_AMD=AMD Athlon II X2 250; RAM=4GB; GPU=GeForce 8600 / Radeon HD 2600; DX=9; Storage=15GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2400; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7850; DX=11; Storage=15GB
 
 S.T.A.L.K.E.R.: Call of Pripyat:
-  MIN: OS=Windows XP/Vista/7; CPU=Intel Core 2 Duo / Any Dual-Core; RAM=2GB; GPU=GeForce 6600 / Radeon X1300 (DX9); DX=9; Storage=6GB
-  REC: OS=Windows 7/10 64-bit; CPU=Intel Core 2 Quad / Any Quad-Core; RAM=4GB; GPU=GeForce GTX 280 / Radeon HD 4870; DX=10; Storage=6GB
+  MIN: OS=Windows XP/Vista/7; CPU=Any Dual-Core; CPU_INTEL=Intel Core 2 Duo E6600; CPU_AMD=AMD Athlon 64 X2 5000+; RAM=2GB; GPU=GeForce 6600 / Radeon X1300 (DX9); DX=9; Storage=6GB
+  REC: OS=Windows 7/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core 2 Quad Q6600; CPU_AMD=AMD Phenom II X4 940; RAM=4GB; GPU=GeForce GTX 280 / Radeon HD 4870; DX=10; Storage=6GB
 
 The Elder Scrolls V: Skyrim Special Edition:
-  MIN: OS=Windows 7/8.1/10 64-bit; CPU=Intel Core i5-750 / AMD Phenom II X4; RAM=8GB; GPU=GeForce GTX 470 / Radeon HD 7870; DX=11; Storage=12GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-2400 / AMD FX-8320; RAM=8GB; GPU=GeForce GTX 780 / Radeon R9 290; DX=11; Storage=SSD 12GB
+  MIN: OS=Windows 7/8.1/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-750; CPU_AMD=AMD Phenom II X4; RAM=8GB; GPU=GeForce GTX 470 / Radeon HD 7870; DX=11; Storage=12GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2400; CPU_AMD=AMD FX-8320; RAM=8GB; GPU=GeForce GTX 780 / Radeon R9 290; DX=11; Storage=SSD 12GB
 
 Half-Life 2:
-  MIN: OS=Windows 98/ME/2000/XP; CPU=Any Dual-Core 1.7GHz; RAM=512MB; GPU=DirectX 8.1 compatible; DX=8.1; Storage=5GB
-  REC: OS=Windows 7/10 64-bit; CPU=Any Quad-Core; RAM=1GB; GPU=DirectX 9 compatible; DX=9; Storage=5GB
+  MIN: OS=Windows 98/ME/2000/XP; CPU=Any Dual-Core; CPU_INTEL=Intel Pentium D 820; CPU_AMD=AMD Athlon 64 X2 3800+; RAM=512MB; GPU=DirectX 8.1 compatible; DX=8.1; Storage=5GB
+  REC: OS=Windows 7/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core 2 Quad Q6600; CPU_AMD=AMD Phenom II X4 940; RAM=1GB; GPU=DirectX 9 compatible; DX=9; Storage=5GB
 
 Grand Theft Auto V:
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core 2 Quad Q6600 / AMD Phenom X4 9850; RAM=4GB; GPU=GeForce 9800 GT / Radeon HD 4870 (1GB); DX=10; Storage=72GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-3470 / AMD FX-8350; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7870; DX=11; Storage=SSD 72GB
+  MIN: OS=Windows 7 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core 2 Quad Q6600; CPU_AMD=AMD Phenom X4 9850; RAM=4GB; GPU=GeForce 9800 GT / Radeon HD 4870 (1GB); DX=10; Storage=72GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-3470; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7870; DX=11; Storage=SSD 72GB
 
 The Witcher 3: Wild Hunt:
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core i5-2500K / AMD Phenom II X4 940; RAM=6GB; GPU=GeForce GTX 660 / Radeon HD 7870; DX=11; Storage=50GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-3770 / AMD FX-8350; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 290; DX=11; Storage=SSD 50GB
+  MIN: OS=Windows 7 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2500K; CPU_AMD=AMD Phenom II X4 940; RAM=6GB; GPU=GeForce GTX 660 / Radeon HD 7870; DX=11; Storage=50GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-3770; CPU_AMD=AMD FX-8350; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 290; DX=11; Storage=SSD 50GB
 
 Elden Ring:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-8400 / AMD Ryzen 3 3300X; RAM=12GB; GPU=GeForce GTX 1060 3GB / Radeon RX 580; DX=12; Storage=60GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-8700K / AMD Ryzen 5 3600X; RAM=16GB; GPU=GeForce GTX 1070 / Radeon RX Vega 56; DX=12; Storage=SSD 60GB
+  MIN: OS=Windows 10 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-8400; CPU_AMD=AMD Ryzen 3 3300X; RAM=12GB; GPU=GeForce GTX 1060 3GB / Radeon RX 580; DX=12; Storage=60GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any 8-Core; CPU_INTEL=Intel Core i7-8700K; CPU_AMD=AMD Ryzen 5 3600X; RAM=16GB; GPU=GeForce GTX 1070 / Radeon RX Vega 56; DX=12; Storage=SSD 60GB
 
 Metro Exodus:
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core i5-4440 / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 670 / Radeon HD 7870; DX=11; Storage=59GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-4770K / AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1070 / Radeon RX Vega 56; DX=12; Storage=SSD 59GB
+  MIN: OS=Windows 7 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4440; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 670 / Radeon HD 7870; DX=11; Storage=59GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-4770K; CPU_AMD=AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1070 / Radeon RX Vega 56; DX=12; Storage=SSD 59GB
 
 Red Dead Redemption 2:
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core i5-2500K / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 280; DX=11; Storage=150GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-4770K / AMD Ryzen 5 1500X; RAM=12GB; GPU=GeForce GTX 1060 6GB / Radeon RX 480; DX=12; Storage=SSD 150GB
+  MIN: OS=Windows 7 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-2500K; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 280; DX=11; Storage=150GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i7-4770K; CPU_AMD=AMD Ryzen 5 1500X; RAM=12GB; GPU=GeForce GTX 1060 6GB / Radeon RX 480; DX=12; Storage=SSD 150GB
 
 Fortnite:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i3-3225; RAM=4GB; GPU=Intel HD 4000 / GeForce GT 520; DX=11; Storage=30GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-7300U / AMD Ryzen 3; RAM=8GB; GPU=GeForce GTX 960 / Radeon R9 280; DX=12; Storage=SSD 30GB
-
-Rust:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-4590 / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7950; DX=11; Storage=25GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-3770 / AMD Ryzen 5; RAM=16GB; GPU=GeForce GTX 980 / Radeon RX 570; DX=11; Storage=SSD 25GB
-
-War Thunder:
-  MIN: OS=Windows 7 64-bit; CPU=Dual-Core 2.4GHz; RAM=4GB; GPU=DX10 compatible; DX=10; Storage=17GB
-  REC: OS=Windows 10/11 64-bit; CPU=Quad-Core; RAM=8GB; GPU=GeForce GTX 760 / Radeon R9 270X; DX=11; Storage=SSD 17GB
-
-Palworld:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-3570 / AMD FX-8350; RAM=8GB; GPU=GeForce GTX 1050 / Radeon R9 380; DX=11; Storage=25GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-7700 / AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1660 / Radeon RX 590; DX=11; Storage=SSD 25GB
-
-Tom Clancy's Rainbow Six Siege:
-  MIN: OS=Windows 7/8.1/10 64-bit; CPU=Intel Core i5-2500K / AMD FX-8120; RAM=6GB; GPU=GeForce GTX 670 / Radeon HD 7970; DX=11; Storage=61GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-4770K / AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 970 / Radeon R9 290X; DX=11; Storage=SSD 61GB
-
-PUBG: Battlegrounds:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-4430 / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 960 / Radeon R7 370; DX=11; Storage=30GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-6600K / AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 3GB / Radeon RX 580; DX=11; Storage=SSD 30GB
-
-Apex Legends:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i3-6300 / AMD FX-4350; RAM=6GB; GPU=GeForce GT 640 / Radeon HD 7730; DX=11; Storage=22GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-3570 / AMD Ryzen 3 1300X; RAM=8GB; GPU=GeForce GTX 970 / Radeon R9 290; DX=11; Storage=SSD 22GB
-
-World of Tanks:
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core 2 Duo; RAM=2GB; GPU=GeForce 8600 GT / Radeon HD 4550; DX=9; Storage=57GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5 / AMD Ryzen 3; RAM=4GB; GPU=GeForce GTX 660 / Radeon HD 7850; DX=11; Storage=SSD 57GB
-
-War Thunder (Ground/Air realistic):
-  MIN: OS=Windows 7 64-bit; CPU=Dual-Core; RAM=4GB; GPU=DX10 compatible; DX=10; Storage=17GB
-  REC: OS=Windows 10/11 64-bit; CPU=Quad-Core; RAM=8GB; GPU=GeForce GTX 760 / Radeon R9 270X; DX=11; Storage=SSD 17GB
-
-Team Fortress 2:
-  MIN: OS=Windows XP; CPU=Any 1.7GHz; RAM=512MB; GPU=DirectX 8.1 compatible; DX=8.1; Storage=7GB
-  REC: OS=Windows 7 64-bit; CPU=Pentium 4 3.0GHz / Any Quad-Core; RAM=1GB; GPU=DirectX 9 compatible; DX=9; Storage=7GB
-
-S.T.A.L.K.E.R. 2: Heart of Chornobyl:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-9600K / AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 1060 6GB / Radeon RX 580; DX=12; Storage=150GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-9700K / AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 2070 / Radeon RX 5700 XT; DX=12; Storage=SSD 150GB
-
-Cyberpunk 2077:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-3570K / AMD FX-8310; RAM=8GB; GPU=GeForce GTX 780 / Radeon RX 470; DX=12; Storage=70GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-4790 / AMD Ryzen 3 3200G; RAM=12GB; GPU=GeForce GTX 1060 6GB / Radeon RX 580; DX=12; Storage=SSD 70GB
-
-Call of Duty: Warzone:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i3-6100 / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 960 / Radeon RX 470; DX=12; Storage=100GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-6600 / AMD Ryzen 5 1600; RAM=12GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=12; Storage=SSD 100GB
-
-Tom Clancy's Rainbow Six Siege (Vulkan):
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-2500K / AMD FX-8120; RAM=6GB; GPU=GeForce GTX 670 / Radeon HD 7970; DX=11; Storage=61GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-4770K / AMD Ryzen 5 1600; RAM=8GB; GPU=GeForce GTX 970 / Radeon R9 290X; DX=12; Storage=SSD 61GB
-
-Assassin's Creed Valhalla:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-4460 / AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 4GB / Radeon R9 380; DX=12; Storage=60GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-6700 / AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 6GB / Radeon RX 570; DX=12; Storage=SSD 60GB
-
-Far Cry 6:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-4460 / AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 / Radeon RX 460; DX=12; Storage=60GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-7700 / AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1080 / Radeon RX Vega 64; DX=12; Storage=SSD 60GB
-
-Hogwarts Legacy:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-6600 / AMD Ryzen 5 1400; RAM=16GB; GPU=GeForce GTX 960 / Radeon RX 470; DX=12; Storage=85GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-8700 / AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1080 Ti / Radeon RX 5700 XT; DX=12; Storage=SSD 85GB
-
-Baldur's Gate 3:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-4690 / AMD FX-8350; RAM=8GB; GPU=GeForce GTX 970 / Radeon RX 480; DX=11; Storage=150GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-8700K / AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce RTX 2060 Super / Radeon RX 5700 XT; DX=11; Storage=SSD 150GB
-
-Starfield:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-8400 / AMD Ryzen 5 2600X; RAM=16GB; GPU=GeForce GTX 1070 Ti / Radeon RX 5700; DX=12; Storage=125GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-9700K / AMD Ryzen 7 3700X; RAM=16GB; GPU=GeForce RTX 2080 / Radeon RX 6800 XT; DX=12; Storage=SSD 125GB
-
-Diablo IV:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-2500K / AMD FX-8100; RAM=8GB; GPU=GeForce GTX 660 / Radeon R9 280; DX=12; Storage=90GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-4770K / AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 970 / Radeon RX 470; DX=12; Storage=SSD 90GB
-
-Overwatch 2:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i3 / AMD Phenom X3 8650; RAM=6GB; GPU=GeForce GTX 600 series / Radeon HD 7000 series; DX=11; Storage=50GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7 / AMD Ryzen 5; RAM=8GB; GPU=GeForce GTX 1060 / Radeon R9 380; DX=11; Storage=SSD 50GB
-
-League of Legends:
-  MIN: OS=Windows 7 64-bit; CPU=Intel Core i3-530 / AMD A6-3650; RAM=2GB; GPU=GeForce 9600GT / Radeon HD 6570; DX=9; Storage=16GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-3300 / AMD Ryzen 3; RAM=4GB; GPU=GeForce GTX 560 / Radeon HD 6950; DX=11; Storage=SSD 16GB
-
-Valorant:
-  MIN: OS=Windows 7/8/10 64-bit; CPU=Intel Core 2 Duo E8400; RAM=4GB; GPU=Intel HD 3000 / GeForce 8400M / Radeon 2400; DX=11; Storage=8GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel i3-4150; RAM=4GB; GPU=GeForce GT 730 / Radeon R7 240; DX=11; Storage=SSD 8GB
-
-ARK: Survival Evolved:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-2400 / AMD FX-8320; RAM=8GB; GPU=GeForce GTX 670 / Radeon HD 7870; DX=11; Storage=60GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-3770 / AMD Ryzen 5 1500X; RAM=16GB; GPU=GeForce GTX 970 / Radeon R9 290; DX=11; Storage=SSD 60GB
-
-DayZ:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-4430 / AMD FX-6300; RAM=8GB; GPU=GeForce GTX 760 / Radeon R9 270X; DX=11; Storage=25GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i5-6600K / AMD Ryzen 5 1600; RAM=12GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 25GB
-
-Escape from Tarkov:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-2500 / AMD FX-4350; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7850; DX=11; Storage=45GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-3770 / AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 570; DX=11; Storage=SSD 45GB
-
-Mafia: Definitive Edition:
-  MIN: OS=Windows 10 64-bit; CPU=Intel Core i5-2500K / AMD FX-8120; RAM=8GB; GPU=GeForce GTX 660 / Radeon HD 7870; DX=11; Storage=50GB
-  REC: OS=Windows 10/11 64-bit; CPU=Intel Core i7-3770 / AMD Ryzen 5 1500X; RAM=16GB; GPU=GeForce GTX 1080 / Radeon RX 5700; DX=11; Storage=SSD 50GB
+  MIN: OS=Windows 10 64-bit; CPU=Any Dual-Core; CPU_INTEL=Intel Core i3-3225; CPU_AMD=AMD Athlon II X2 250; RAM=4GB; GPU=Intel HD 4000 / GeForce GT 520; DX=11; Storage=30GB
+  REC: OS=Windows 10/11 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-7300U; CPU_AMD=AMD Ryzen 3 1200; RAM=8GB; GPU=GeForce GTX 960 / Radeon R9 280; DX=12; Storage=SSD 30GB
