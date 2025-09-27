@@ -4,160 +4,248 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InfoPC v2.0.0 — Pochmak Labs</title>
-  <meta name="description" content="InfoPC — аккуратное Windows‑приложение для сканирования железа: CPU, GPU, RAM, диски, материнская плата. Стеклянный интерфейс, список игр с MIN/REC требованиями. Доступна x64‑версия." />
-  <meta name="theme-color" content="#0f1216" />
+  <meta name="description" content="InfoPC — аккуратное Windows‑приложение для сканирования ПК: CPU, GPU, RAM, диски, материнская плата. Стеклянный интерфейс, сравнение с MIN/REC требованиями игр. Доступна x64‑версия." />
+  <meta name="theme-color" content="#0c1016" />
   <link rel="icon" href="favicon.png" />
   <style>
     :root{
-      --bg:#0f1216;--bg2:#10131a;
-      --card:#151a1f26;--border:#223a4754;
-      --accent:#6ae5ff;--accent2:#44ddf2;
-      --text:#ffffff;--muted:#ffffffb3;
-      --success:#34d399;--warn:#f59e0b;--danger:#ef4444;
-      --maxw:1120px;--radius:16px;
-      --shadow:0 10px 24px #00000040;
-      --focus:0 0 0 3px #6ae5ff55;
+      --bg:#0a0e14; --bg2:#0d1118;
+      --glass:#121824ee; --glass-soft:#111722cc; --glass-strong:#0f151fee;
+      --border:#223a47a8; --line:#1f2c36; --line2:#18232e;
+      --accent:#6ae5ff; --accent2:#44ddf2; --accent3:#9af6ff;
+      --text:#ffffff; --muted:#ffffffb3; --dim:#ffffff80;
+      --success:#34d399; --warn:#f59e0b; --danger:#ef4444;
+      --radius:18px; --r2:14px; --shadow:0 18px 48px #0000006c;
+      --focus:0 0 0 3px #6ae5ff66; --maxw:1180px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;color:var(--text);
-      font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+      margin:0; color:var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
       background:
-        radial-gradient(900px 620px at 14% 14%, #44ddf233, transparent 70%),
-        radial-gradient(900px 620px at 82% 78%, #28c6e522, transparent 70%),
-        linear-gradient(135deg, var(--bg), var(--bg2));
+        radial-gradient(1100px 760px at 18% 20%, #59e6ff20, transparent 70%),
+        radial-gradient(980px 740px at 83% 78%, #2fcff31e, transparent 72%),
+        conic-gradient(from 210deg at 50% 40%, #0b0f14, #0d1118 38%, #0b0f14 72%, #0d1118);
     }
-    a{color:var(--accent);text-decoration:none}
+    a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:var(--maxw);margin:0 auto;padding:20px}
+    .container{max-width:var(--maxw); margin:0 auto; padding:24px}
 
-  
+    /* Header */
     header{
-      position:sticky;top:0;z-index:50;
+      position:sticky; top:0; z-index:60;
+      background:linear-gradient(180deg,#0d1118cc,#0d111888);
       backdrop-filter:saturate(120%) blur(10px);
-      background:#0f1216cc;border-bottom:1px solid var(--border);
+      border-bottom:1px solid var(--border);
     }
     .nav{
-      display:flex;align-items:center;gap:12px;
-      max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+      display:flex; align-items:center; gap:12px;
+      max-width:var(--maxw); margin:0 auto; padding:12px 24px;
     }
-    .logo-dot{width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px 2px #6ae5ff80}
-    .brand{font-weight:800;letter-spacing:.2px;color:#ffffffdd}
+    .logo{
+      display:inline-flex; align-items:center; gap:12px; color:#fff;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo-gem{
+      width:22px; height:22px; border-radius:7px; position:relative; isolation:isolate;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:
+        0 8px 26px #6ae5ff5c,
+        inset 0 1px 2px #ffffff33;
+    }
+    .logo-gem::after{
+      content:""; position:absolute; inset:-8px; border-radius:12px;
+      background:conic-gradient(from 140deg,#6ae5ff55,transparent 180deg);
+      filter:blur(14px); opacity:.7; pointer-events:none;
+    }
     .nav-spacer{flex:1}
     .btn{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:10px 14px;border-radius:12px;border:1px solid #6ae5ff75;
-      background:#6ae5ff22;color:var(--accent);cursor:pointer;
-      transition:background .12s ease, transform .08s ease;
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 16px; border-radius:12px; border:1px solid #6ae5ff75;
+      background:#6ae5ff1f; color:var(--accent); cursor:pointer;
+      transition:background .14s ease, transform .1s ease, box-shadow .16s ease;
+      will-change:transform;
     }
-    .btn:hover{background:#6ae5ff33;transform:translateY(-1px)}
-    .btn:focus-visible{outline:none;box-shadow:var(--focus)}
-    .btn-outline{background:transparent;border-color:#6ae5ff80}
-    .btn-secondary{border-color:#ffffff33;background:#ffffff12;color:#ffffffcc}
-    .btn[disabled], .btn[aria-disabled="true"]{opacity:.6;cursor:not-allowed;transform:none}
+    .btn:hover{background:#6ae5ff2e; transform:translateY(-1px); box-shadow:0 12px 26px #00000058}
+    .btn:active{transform:translateY(0)}
+    .btn:focus-visible{outline:none; box-shadow:var(--focus)}
+    .btn-outline{background:transparent; border-color:#6ae5ff80}
+    .btn-secondary{border-color:#ffffff33; background:#ffffff14; color:#ffffffcc}
+    .btn[disabled], .btn[aria-disabled="true"]{opacity:.6; cursor:not-allowed; transform:none}
 
-
-    .glass{
-      border-radius:var(--radius);border:1px solid var(--border);
-      background:#1a1f2622;backdrop-filter:blur(12px);
-      box-shadow:var(--shadow);
-    }
-    .card{padding:16px}
-    .section-title{font-size:22px;font-weight:700;margin:8px 0 12px}
-    .muted{color:var(--muted)}
-
-
+    /* Hero */
     .hero{
-      display:grid;gap:20px;align-items:center;
-      grid-template-columns:1.2fr 1fr;padding:22px 0 6px;
+      display:grid; gap:28px; align-items:stretch;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+      padding:30px 0 12px; position:relative;
     }
-    @media (max-width:980px){.hero{grid-template-columns:1fr}}
+    @media (max-width:980px){ .hero{ grid-template-columns:1fr } }
+
+    /* Ambient field */
+    .field{
+      position:absolute; inset:-1px; pointer-events:none; z-index:-1;
+      background:
+        radial-gradient(600px 240px at 18% 18%, #5be5ff18, transparent 70%),
+        radial-gradient(540px 220px at 82% 74%, #2bd6ff18, transparent 70%);
+      filter:blur(28px);
+    }
+
+    /* Hero primary */
+    .hero-card{
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:
+        linear-gradient(180deg,var(--glass),#121720e8),
+        radial-gradient(360px 240px at 92% 8%, #6ae5ff1a, transparent 72%);
+      backdrop-filter:blur(16px) saturate(118%);
+      box-shadow:var(--shadow);
+      padding:22px;
+      overflow:hidden;
+    }
     .pill{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:6px 10px;border-radius:999px;border:1px solid #6ae5ff80;
-      background:#6ae5ff22;color:var(--accent);font-weight:700;font-size:12px;
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 12px; border-radius:999px; border:1px solid #6ae5ff85;
+      background:#6ae5ff22; color:var(--accent); font-weight:700; font-size:12px;
+      box-shadow:inset 0 1px 0 #ffffff1a;
     }
-    h1{font-size:40px;font-weight:800;margin:8px 0 10px}
-    .lead{font-size:16px;color:var(--muted);margin:0 0 16px}
-    .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    h1{
+      font-size:46px; font-weight:900; margin:12px 0 12px; line-height:1.06;
+      letter-spacing:-0.25px;
+    }
+    .lead{font-size:16px; color:var(--muted); margin:0 0 20px; max-width:68ch}
+    .row{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
 
-    .grid{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:980px){.grid{grid-template-columns:1fr}}
-    .feature-card, .req-card{
-      display:flex;flex-direction:column;justify-content:flex-start;
-      min-height:160px;padding:16px;
+    .hint{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px;
+      border-radius:10px; font-size:13px; font-weight:700;
+      color:#ffffffcc; border:1px solid #ffffff20; background:#ffffff12;
     }
-    .item-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
-    .badge{
-      display:inline-flex;align-items:center;gap:6px;
-      padding:6px 10px;border-radius:10px;font-size:13px;font-weight:700;
-      color:#ffffffcc;border:1px solid #ffffff20;background:#ffffff14;
-    }
-    .badge.accent{color:var(--accent);border-color:#6ae5ff66;background:#6ae5ff22}
-    .badge.success{color:var(--success);border-color:#34d39966;background:#34d39922}
-    .badge.warn{color:var(--warn);border-color:#f59e0b66;background:#f59e0b22}
-    .badge.danger{color:var(--danger);border-color:#ef444466;background:#ef444422}
-    .desc{color:var(--muted);font-size:14px;line-height:1.45;flex:1}
+    .hint.success{color:var(--success); border-color:#34d39966; background:#34d39922}
+    .hint.warn{color:var(--warn); border-color:#f59e0b66; background:#f59e0b22}
 
- 
     .alert{
-      display:grid;grid-template-columns:24px 1fr;gap:10px;
-      padding:12px;border-radius:12px;border:1px solid #f59e0b66;background:#f59e0b1a;
+      display:grid; grid-template-columns:24px 1fr; gap:10px;
+      padding:12px; border-radius:12px;
+      border:1px solid #f59e0b66; background:linear-gradient(180deg,#f59e0b1f,#f59e0b14);
+      margin-top:16px;
     }
 
+    /* Showcase panel */
+    .showcase{
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:
+        linear-gradient(180deg,var(--glass-strong),#10161fee),
+        radial-gradient(240px 160px at 85% 18%, #5be5ff18, transparent 65%);
+      backdrop-filter:blur(17px) saturate(122%);
+      box-shadow:var(--shadow);
+      padding:18px;
+      display:grid;
+      grid-template-rows:auto 1fr auto;
+      gap:14px;
+      position:relative;
+      overflow:hidden;
+    }
+    .sc-head{display:flex; align-items:center; justify-content:space-between}
+    .sc-title{font-weight:800; letter-spacing:.2px}
+    .badge{
+      display:inline-flex; align-items:center; gap:6px; padding:6px 10px;
+      border-radius:10px; font-size:13px; font-weight:700;
+      color:#ffffffcc; border:1px solid #ffffff20; background:#ffffff14;
+    }
+    .badge.success{color:var(--success); border-color:#34d39966; background:#34d39922}
+    .badge.warn{color:var(--warn); border-color:#f59e0b66; background:#f59e0b22}
 
-    .code{
-      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
-      font-size:12px;color:#cdeefd;background:#0b0f13;border:1px solid #1e2a36;
-      padding:8px 10px;border-radius:8px;user-select:all;
+    .sc-grid{
+      display:grid; gap:12px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+    @media (max-width:560px){ .sc-grid{ grid-template-columns:1fr } }
+    .sc-card{
+      border:1px solid var(--line2);
+      border-radius:14px;
+      padding:12px;
+      background:
+        linear-gradient(180deg,#0c1218cc,#0b1117cc),
+        radial-gradient(240px 160px at 100% 0%, #5be5ff12, transparent 75%);
+    }
+    .sc-label{color:var(--dim); font-size:12px; margin-bottom:4px}
+    .sc-value{font-size:14px}
+    .sc-foot{
+      display:flex; align-items:center; gap:10px; justify-content:flex-end;
+      border-top:1px dashed #1f2c36; padding-top:10px; color:#ffffff99; font-size:12px;
     }
 
-
-    .faq{display:grid;gap:10px}
-    .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
-    .faq-head{
-      width:100%;text-align:left;background:#ffffff12;color:#ffffffee;
-      padding:12px 14px;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;
-    }
-    .faq-head:hover{background:#ffffff18}
-    .faq-head:focus-visible{outline:none;box-shadow:var(--focus)}
-    .faq-body{padding:12px 14px;display:none}
-    .faq-item.open .faq-body{display:block}
-
-
-    footer{margin-top:28px;padding:18px 20px;border-top:1px solid var(--border);color:#ffffff99;text-align:center}
+    /* Shared blocks */
+    .glass{border-radius:var(--radius); border:1px solid var(--border); background:linear-gradient(180deg,var(--glass-soft),#121720cc); backdrop-filter:blur(14px) saturate(115%); box-shadow:var(--shadow)}
+    .card{padding:20px}
+    .section-title{font-size:22px; font-weight:800; margin:8px 0 12px; letter-spacing:.1px}
+    .muted{color:var(--muted)}
     .small{font-size:12px}
 
+    .grid{display:grid; gap:14px; grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:980px){ .grid{ grid-template-columns:1fr } }
+    .feature-card, .req-card{
+      display:flex; flex-direction:column; justify-content:flex-start;
+      min-height:160px; padding:16px; border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,#0f141acc,#0e1319c0);
+    }
+    .item-top{display:flex; align-items:flex-start; gap:10px; margin-bottom:8px}
+    .desc{color:var(--muted); font-size:14px; line-height:1.5; flex:1}
 
+    /* FAQ */
+    .faq{display:grid; gap:12px}
+    .faq-item{border:1px solid var(--border); border-radius:12px; overflow:hidden}
+    .faq-head{
+      width:100%; text-align:left; background:#ffffff12; color:#ffffffee;
+      padding:12px 14px; border:none; cursor:pointer;
+      display:flex; align-items:center; gap:10px;
+    }
+    .faq-head:hover{background:#ffffff18}
+    .faq-head:focus-visible{outline:none; box-shadow:var(--focus)}
+    .faq-body{padding:12px 14px; display:none; background:#0f141a80}
+    .faq-item.open .faq-body{display:block}
+
+    /* Footer */
+    footer{margin-top:34px; padding:22px; border-top:1px solid var(--border); color:#ffffff99; text-align:center}
+
+    /* Motion safety */
     @media (prefers-reduced-motion: reduce){
-      .btn, .btn:hover{transition:none;transform:none}
+      .btn, .btn:hover{transition:none; transform:none}
     }
   </style>
 </head>
 <body>
-
+  <!-- Header -->
   <header>
     <nav class="nav" aria-label="Главная навигация">
-      <div class="logo-dot" aria-hidden="true"></div>
-      <div class="brand">InfoPC • Pochmak Labs</div>
+      <div class="logo">
+        <span class="logo-gem" aria-hidden="true"></span>
+        <span>InfoPC • Pochmak Labs</span>
+      </div>
       <div class="nav-spacer"></div>
-      <a class="btn btn-outline" href="https://t.me/pochmaklabs" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn btn-outline" href="https://t.me/pochmaklabs" target="_blank" rel="noopener" title="Открыть Telegram">Telegram</a>
     </nav>
   </header>
 
   <main class="container">
-
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
-      <div>
+      <div class="field" aria-hidden="true"></div>
+
+      <!-- Left: main hero card -->
+      <div class="hero-card">
         <div class="pill" title="Последняя стабильная версия">Версия: v2.0.0</div>
         <h1 id="hero-title">InfoPC — точное сканирование вашего ПК</h1>
         <p class="lead">
-          CPU, GPU, RAM (модули), материнская плата и диски — красиво и по делу.
-          Фирменный стеклянный интерфейс и сравнение вашего ПК с MIN/REC требованиями игр.
+          InfoPC собирает основные характеристики: процессор, видеокарта, оперативная память по модулям, диски и материнская плата.
+          Интерфейс без шума — стекло, мягкий свет, чёткая типографика. Есть сравнение вашего ПК с минимальными и рекомендуемыми требованиями игр.
         </p>
 
-        <div class="row" style="margin-top:8px;">
+        <div class="row" style="margin-top:12px;">
           <button id="btn-x64" class="btn" title="Скачать 64‑битный установщик">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zm7-18L5.33 8h3.84v4h4.66V8h3.84L12 2z"/></svg>
             Скачать InfoPC x64
@@ -165,124 +253,153 @@
           <button class="btn btn-secondary" aria-disabled="true" disabled title="32‑битная версия в разработке">
             x86 (32‑бит) — в разработке
           </button>
-          <span id="os-hint" class="badge warn" style="display:none;"></span>
+          <span id="os-hint" class="hint warn" style="display:none;"></span>
         </div>
 
-        <div class="row small" style="margin-top:10px;">
-          <span class="muted">SHA‑256:</span>
-          <code id="sha256" class="code">0000000000000000000000000000000000000000000000000000000000000000</code>
-          <button id="copy-hash" class="btn btn-outline" style="padding:6px 10px;border-radius:8px;">Копировать</button>
-        </div>
-
-        <div class="alert" style="margin-top:14px;">
+        <div class="alert">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
           <div>
-            <strong>Важно:</strong> антивирус или Windows SmartScreen могут ругаться при установке,
-            потому что файлы <u>не подписаны цифровой подписью</u>. Приложение безопасное и не содержит вредоносного кода.
-            Если появится предупреждение — нажмите «Подробнее» → «Выполнить в любом случае».
+            <strong>Важно:</strong> антивирус или Windows SmartScreen могут предупредить при установке —
+            файлы сейчас <u>без цифровой подписи</u>. Приложение безопасное. Если увидите SmartScreen,
+            нажмите «Подробнее» → «Выполнить в любом случае».
           </div>
         </div>
       </div>
 
-      <aside class="glass card" aria-labelledby="features-title">
-        <div class="section-title" id="features-title">Ключевые особенности</div>
-        <div class="grid">
-          <div class="glass feature-card">
-            <div class="item-top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 7l-5 5h3v4h4v-4h3l-5-5z"/></svg>
-              <div class="badge accent">Скан железа</div>
-            </div>
-            <div class="desc">CPU, GPU, RAM (модули), материнская плата и диски.</div>
+      <!-- Right: live-like showcase -->
+      <aside class="showcase" aria-labelledby="sc-title">
+        <div class="sc-head">
+          <div class="sc-title" id="sc-title">Ваш ПК (кратко)</div>
+          <span class="badge" id="os-mini" aria-live="polite" aria-atomic="true" style="display:none;"></span>
+        </div>
+
+        <div class="sc-grid">
+          <div class="sc-card">
+            <div class="sc-label">CPU</div>
+            <div class="sc-value" id="sc-cpu">Определение...</div>
           </div>
-          <div class="glass feature-card">
-            <div class="item-top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/></svg>
-              <div class="badge accent">Список игр</div>
-            </div>
-            <div class="desc">Сравнение вашего ПК с MIN/REC требованиями популярных игр.</div>
+          <div class="sc-card">
+            <div class="sc-label">GPU</div>
+            <div class="sc-value" id="sc-gpu">Определение...</div>
           </div>
-          <div class="glass feature-card">
-            <div class="item-top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8zm0 4l4 4H8l4-4z"/></svg>
-              <div class="badge accent">Стеклянный UI</div>
-            </div>
-            <div class="desc">Аккуратная типографика, свечение, плавные анимации.</div>
+          <div class="sc-card">
+            <div class="sc-label">RAM</div>
+            <div class="sc-value" id="sc-ram">Определение...</div>
+          </div>
+          <div class="sc-card">
+            <div class="sc-label">Диски</div>
+            <div class="sc-value" id="sc-dsk">Определение...</div>
           </div>
         </div>
 
-        <div class="section-title" style="margin-top:16px;">Системные требования</div>
-        <div class="grid" aria-label="Системные требования">
-          <div class="glass req-card">
-            <div class="item-top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v11h2V5h14v14h-11v2h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
-              <div class="badge success">OS</div>
-            </div>
-            <div class="desc">Windows 10/11, только x64</div>
-          </div>
-          <div class="glass req-card">
-            <div class="item-top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M15 9H5v6h10V9zm2-5H3c-1.1 0-2 .9-2 2v12h4v2h10v-2h4V6c0-1.1-.9-2-2-2z"/></svg>
-              <div class="badge success">RAM</div>
-            </div>
-            <div class="desc">от 4 GB (рекомендуется 8 GB+)</div>
-          </div>
-          <div class="glass req-card">
-            <div class="item-top">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 3L4 9v12h16V9l-8-6zm0 2.2L18 10v8H6v-8l6-4.8z"/></svg>
-              <div class="badge success">Диск</div>
-            </div>
-            <div class="desc">~100 MB для установки и данных</div>
-          </div>
+        <div class="sc-foot">
+          <span class="small">В приложении названия и метаданные определяются точно — без ручных правок.</span>
         </div>
       </aside>
     </section>
 
- 
-    <section class="glass card" style="margin-top:18px;" aria-labelledby="changelog-title">
-      <div class="section-title" id="changelog-title">Что нового в v2.0.0</div>
+    <!-- FEATURES -->
+    <section class="glass card" style="margin-top:20px;" aria-labelledby="features-title">
+      <div class="section-title" id="features-title">Ключевые особенности</div>
       <div class="grid">
-        <div class="glass feature-card">
+        <div class="feature-card">
           <div class="item-top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
-            <div class="badge success">UI</div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 7l-5 5h3v4h4v-4h3l-5-5z"/></svg>
+            <span class="badge" style="color:var(--accent);border-color:#6ae5ff66;background:#6ae5ff22">Скан железа</span>
           </div>
-          <div class="desc">Полностью обновлён визуал: стекло, свечение, плавные анимации, чёткая типографика.</div>
+          <div class="desc">CPU, GPU, RAM (модули), материнская плата и диски — аккуратно и без лишних экранов.</div>
         </div>
-        <div class="glass feature-card">
+        <div class="feature-card">
           <div class="item-top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/></svg>
-            <div class="badge success">Игры</div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M3 13h2v-2H3v2zm4 0h14v-2H7v2z"/></svg>
+            <span class="badge" style="color:var(--accent);border-color:#6ae5ff66;background:#6ae5ff22">Список игр</span>
           </div>
-          <div class="desc">Список поддерживаемых игр и сравнение MIN/REC с вашим ПК.</div>
+          <div class="desc">Сравнение MIN/REC требований популярных игр с вашим ПК — наглядно и просто.</div>
         </div>
-        <div class="glass feature-card">
+        <div class="feature-card">
           <div class="item-top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 7l-5 5h3v4h4v-4h3l-5-5z"/></svg>
-            <div class="badge success">Скан</div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8zm0 4l4 4H8l4-4z"/></svg>
+            <span class="badge" style="color:var(--accent);border-color:#6ae5ff66;background:#6ae5ff22">Стеклянный UI</span>
           </div>
-          <div class="desc">Точнее RAM (модули), диски, CPU/GPU и материнская плата.</div>
+          <div class="desc">Типографика, мягкий свет, плавные переходы — интерфейс выглядит и ощущается живым.</div>
         </div>
       </div>
     </section>
 
+    <!-- REQUIREMENTS -->
+    <section class="glass card" style="margin-top:20px;" aria-labelledby="req-title">
+      <div class="section-title" id="req-title">Системные требования</div>
+      <div class="grid" aria-label="Системные требования">
+        <div class="req-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v11h2V5h14v14h-11v2h11c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+            <span class="badge success">OS</span>
+          </div>
+          <div class="desc">Windows 10/11, архитектура x64.</div>
+        </div>
+        <div class="req-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M15 9H5v6h10V9zm2-5H3c-1.1 0-2 .9-2 2v12h4v2h10в-2h4V6c0-1.1-.9-2-2-2z"/></svg>
+            <span class="badge success">RAM</span>
+          </div>
+          <div class="desc">Минимум 4 GB (рекомендуется 8 GB+).</div>
+        </div>
+        <div class="req-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 3L4 9v12h16V9l-8-6zm0 2.2L18 10v8H6v-8l6-4.8z"/></svg>
+            <span class="badge success">Диск</span>
+          </div>
+          <div class="desc">~100 MB для установки и данных.</div>
+        </div>
+      </div>
+    </section>
 
-    <section class="glass card" style="margin-top:18px;" aria-labelledby="faq-title">
+    <!-- CHANGELOG -->
+    <section class="glass card" style="margin-top:20px;" aria-labelledby="changelog-title">
+      <div class="section-title" id="changelog-title">Что нового в v2.0.0</div>
+      <div class="grid">
+        <div class="feature-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+            <span class="badge success">UI</span>
+          </div>
+          <div class="desc">Обновлён визуальный слой: стекло, мягкое свечение, плавные анимации, чёткая типографика.</div>
+        </div>
+        <div class="feature-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M3 13h2v-2H3v2zm4 0h14v-2H7в2z"/></svg>
+            <span class="badge success">Игры</span>
+          </div>
+          <div class="desc">Список поддерживаемых игр и сравнение MIN/REC с вашей конфигурацией.</div>
+        </div>
+        <div class="feature-card">
+          <div class="item-top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#34d399" aria-hidden="true"><path d="M12 7l-5 5h3v4h4v-4h3л-5-5z"/></svg>
+            <span class="badge success">Скан</span>
+          </div>
+          <div class="desc">Точнее определяются RAM‑модули, диски, CPU/GPU и материнская плата — аккуратные названия и метаданные.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="glass card" style="margin-top:20px;" aria-labelledby="faq-title">
       <div class="section-title" id="faq-title">FAQ</div>
       <div class="faq" id="faq">
         <div class="faq-item">
-          <button class="faq-head" type="button">
+          <button class="faq-head" type="button" aria-expanded="false">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
             Почему может ругаться антивирус / SmartScreen?
           </button>
           <div class="faq-body">
-            Файл пока не подписан цифровой подписью — некоторые антивирусы и SmartScreen показывают предупреждение «неизвестный издатель».
-            Приложение безопасное. Если видите диалог SmartScreen — нажмите «Подробнее» → «Выполнить в любом случае».
+            Файл пока без цифровой подписи — некоторые антивирусы и SmartScreen показывают «неизвестный издатель».
+            Приложение безопасное. Если появляется SmartScreen, нажмите «Подробнее» → «Выполнить в любом случае».
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-head" type="button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+          <button class="faq-head" type="button" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4л-8 8h16л-8-8z"/></svg>
             Где скачать 32‑битную версию?
           </button>
           <div class="faq-body">
@@ -291,21 +408,21 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-head" type="button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4l-8 8h16l-8-8z"/></svg>
+          <button class="faq-head" type="button" aria-expanded="false">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#6ae5ff" aria-hidden="true"><path d="M12 4л-8 8h16л-8-8z"/></svg>
             Как подтвердить целостность установщика?
           </button>
           <div class="faq-body">
-            Сравните SHA‑256 хэш на этой странице с хэшем вашего файла после скачивания. Хэши должны совпасть.
+            После скачивания проверьте хэш любым удобным инструментом и сравните с данными релиза на GitHub.
           </div>
         </div>
       </div>
     </section>
 
-
-    <section class="glass card" style="margin-top:18px;" aria-labelledby="contact-title">
+    <!-- CONTACT -->
+    <section class="glass card" style="margin-top:20px;" aria-labelledby="contact-title">
       <div class="section-title" id="contact-title">Связь и поддержка</div>
-      <p class="muted">Есть идеи, вопросы или баги? Присоединяйтесь к Telegram‑каналу:</p>
+      <p class="muted">Есть идея, вопрос или баг? Присоединяйтесь к Telegram‑каналу — короткие обновления и живые обсуждения.</p>
       <p><a class="btn btn-outline" href="https://t.me/pochmaklabs" target="_blank" rel="noopener">Открыть Telegram</a></p>
     </section>
   </main>
@@ -316,90 +433,115 @@
   </footer>
 
   <script>
-    const DOWNLOAD_X64_URL = "https://github.com/AlexanderBichpochmak/InfoPC/releases/download/v.2.0.0/InfoPC-Setup-1.0.0.exe";
-    const SHA256 = "b4f2f6b5e7c1d9a2f0e8d3c4a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0";
+    // Конфиг релиза (обнови URL под фактический билд)
+    const DOWNLOAD_X64_URL = "https://github.com/AlexanderBichpochmak/InfoPC/releases/download/v2.0.0/InfoPC-Setup-2.0.0-x64.exe";
 
     const btnX64 = document.getElementById("btn-x64");
-    const shaEl = document.getElementById("sha256");
-    const copyBtn = document.getElementById("copy-hash");
     const osHint = document.getElementById("os-hint");
+    const osMini = document.getElementById("os-mini");
 
-
-    shaEl.textContent = SHA256;
-
-  
+    // Скачивание x64 — без визуальных скачков
     btnX64.addEventListener("click", () => {
       btnX64.disabled = true;
       btnX64.setAttribute("aria-disabled","true");
+      const prev = btnX64.textContent;
       btnX64.textContent = "Загрузка…";
       try { window.location.assign(DOWNLOAD_X64_URL); }
       finally {
         setTimeout(() => {
           btnX64.disabled = false;
           btnX64.removeAttribute("aria-disabled");
-          btnX64.textContent = "Скачать InfoPC x64";
+          btnX64.textContent = prev;
         }, 1200);
       }
     });
 
-
-    copyBtn.addEventListener("click", async () => {
-      try{
-        await navigator.clipboard.writeText(SHA256);
-        copyBtn.textContent = "Скопировано!";
-        setTimeout(() => copyBtn.textContent = "Копировать", 1500);
-      }catch{
-        const range = document.createRange();
-        range.selectNodeContents(shaEl);
-        const sel = window.getSelection();
-        sel.removeAllRanges();
-        sel.addRange(range);
-      }
-    });
-
-
+    // Подсказка по ОС и архитектуре + витрина
     (async function detectOS(){
-      let platform = "", arch = "";
+      let platform = "", arch = "", ua = (navigator.userAgent || "").toLowerCase();
+      let cpu = "—", gpu = "—", ram = "—", dsk = "—";
+
       try{
         if (navigator.userAgentData) {
           const info = await navigator.userAgentData.getHighEntropyValues(["platform","architecture","bitness"]);
           platform = info.platform || "";
           arch = info.architecture || info.bitness || "";
         } else {
-          const ua = navigator.userAgent.toLowerCase();
           platform = ua.includes("windows") ? "Windows" : (ua.includes("mac") ? "macOS" : (ua.includes("linux") ? "Linux" : ""));
           arch = ua.includes("arm") || ua.includes("aarch64") ? "ARM" :
                  (ua.includes("x64") || ua.includes("win64") || ua.includes("wow64")) ? "x64" :
                  (ua.includes("x86") || ua.includes("i386") || ua.includes("i686")) ? "x86" : "";
         }
-      }catch{}
+
+        // Витрина — мягкие эвристики (точность в приложении выше)
+        const cpuMatch = ua.match(/(ryzen\s*\d|intel|i[3579]-\d{3,4}|core\s*i[3579])/i);
+        const gpuMatch = ua.match(/(nvidia|geforce|rtx|gtx|radeon|rx\s*\d)/i);
+        cpu = cpuMatch ? cpuMatch[0].replace(/\s+/g," ").toUpperCase() : "CPU: будет определён при запуске";
+        gpu = gpuMatch ? gpuMatch[0].replace(/\s+/g," ").toUpperCase() : "GPU: будет определена при запуске";
+        ram = "RAM: точные модули после сканирования";
+        dsk = "Диски: названия и типы будут видны в приложении";
+      }catch{
+        cpu = "CPU: будет определён при запуске";
+        gpu = "GPU: будет определена при запуске";
+        ram = "RAM: точные модули после сканирования";
+        dsk = "Диски: названия и типы будут видны в приложении";
+      }
+
       const isWindows = (platform || "").toLowerCase().includes("win");
       const isX64 = (arch || "").toLowerCase().includes("64");
+
       osHint.style.display = "inline-flex";
+      osMini.style.display = "inline-flex";
+
       if (!isWindows) {
-        osHint.textContent = "Ваше устройство не Windows — загрузчик только для Windows x64";
+        osHint.textContent = "Ваше устройство не Windows — загрузчик для Windows x64";
         osHint.classList.remove("success"); osHint.classList.add("warn");
+        osMini.classList.remove("success","warn"); osMini.classList.add("warn");
+        osMini.textContent = platform ? platform : "ОС не распознана";
       } else if (!isX64) {
         osHint.textContent = "Возможно x86/ARM. Сейчас доступна только x64‑версия";
         osHint.classList.remove("success"); osHint.classList.add("warn");
+        osMini.classList.remove("success","warn"); osMini.classList.add("warn");
+        osMini.textContent = "Windows (не x64)";
       } else {
         osHint.textContent = "Windows x64 обнаружена — можно скачивать";
         osHint.classList.remove("warn"); osHint.classList.add("success");
+        osMini.classList.remove("warn"); osMini.classList.add("success");
+        osMini.textContent = "Windows x64";
       }
+
+      // Заполнение витрины
+      document.getElementById("sc-cpu").textContent = cpu;
+      document.getElementById("sc-gpu").textContent = gpu;
+      document.getElementById("sc-ram").textContent = ram;
+      document.getElementById("sc-dsk").textContent = dsk;
     })();
 
+    // FAQ accordion — без дёрганий и с поддержкой клавиатуры + aria-expanded
     document.querySelectorAll(".faq-item").forEach(item => {
       const head = item.querySelector(".faq-head");
-      head.addEventListener("click", () => {
+      const body = item.querySelector(".faq-body");
+      function toggle(){
         const open = item.classList.contains("open");
-        document.querySelectorAll(".faq-item.open").forEach(i => i.classList.remove("open"));
-        if (!open) item.classList.add("open");
-      });
+        document.querySelectorAll(".faq-item.open").forEach(i => {
+          i.classList.remove("open");
+          const h = i.querySelector(".faq-head");
+          if (h) h.setAttribute("aria-expanded","false");
+        });
+        if (!open) {
+          item.classList.add("open");
+          head.setAttribute("aria-expanded","true");
+          body.scrollTop = 0;
+        } else {
+          item.classList.remove("open");
+          head.setAttribute("aria-expanded","false");
+        }
+      }
+      head.addEventListener("click", toggle);
       head.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); head.click(); }
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
       });
     });
   </script>
 </body>
 </html>
-
