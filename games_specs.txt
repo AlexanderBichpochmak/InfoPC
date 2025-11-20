@@ -150,10 +150,6 @@ Sea of Thieves:
   MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-3470; CPU_AMD=AMD FX-6300; RAM=8GB; GPU=GeForce GTX 770 / Radeon R9 380; DX=11; Storage=75GB
   REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-4770; CPU_AMD=AMD Ryzen 5 1600; RAM=16GB; GPU=GeForce GTX 1060 / Radeon RX 580; DX=11; Storage=SSD 75GB
 
-Genshin Impact:
-  MIN: OS=Windows 7/8.1/10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-750; CPU_AMD=AMD Phenom II X4; RAM=8GB; GPU=GeForce GT 1030 / Radeon R7 240; DX=11; Storage=70GB
-  REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i5-9400F; CPU_AMD=AMD Ryzen 5 2600; RAM=16GB; GPU=GeForce GTX 1660 / Radeon RX 590; DX=11; Storage=SSD 70GB
-
 Monster Hunter Rise:
   MIN: OS=Windows 10 64-bit; CPU=Any Quad-Core; CPU_INTEL=Intel Core i5-4460; CPU_AMD=AMD FX-8300; RAM=8GB; GPU=GeForce GTX 1060 / Radeon RX 570; DX=12; Storage=36GB
   REC: OS=Windows 10/11 64-bit; CPU=Any 6-Core; CPU_INTEL=Intel Core i7-8700; CPU_AMD=AMD Ryzen 5 3600; RAM=16GB; GPU=GeForce GTX 1660 Ti / Radeon RX 590; DX=12; Storage=SSD 36GB
